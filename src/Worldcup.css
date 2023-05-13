@@ -8,17 +8,21 @@
     text-align:center;
     background-color: rgba(0,0,0,0.5);
     color:white;
-    width:90vw;
+    width:60vw;
     height:50px;
     font-size:5vh;
+    z-index: 10;
+    text-shadow: 1px 1px 5px black;
 }
 .mainbox{
     background-color: #181818;
-    width:90vw;
+    width:100vw;
     height:100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:0px;
+    padding:0px;
 }
 #limg0{
     width:50%;
@@ -34,6 +38,7 @@
     justify-content: flex-end;
     animation-name:slide;
     animation-duration: 1s;
+    z-index: 3;
 }
 #rimg0{
     width:50%;
@@ -48,26 +53,28 @@
     justify-content: flex-start;
     animation-name:slide;
     animation-duration: 1s;
+    z-index: 2;
 }
-#name1{
-    font-size:7vh;
-    position:fixed;
-    top:60vh;
-    left:30%;
+#nameL{
+    position:absolute;
+    font-size:5vh;
     color:white;
     text-shadow: 1px 1px 5px black;
-    z-index: 5;
+    margin-right:100px;
+    margin-top:500px;
+    z-index: 2;
+    
 }
 
-#name2{
-    font-size:7vh;
-    position:fixed;
-    top:60vh;
-    right:30%;
+#nameR{
+    position:absolute;
+    font-size:5vh;
     color:white;
     text-shadow: 1px 1px 5px black;
-    z-index: 5;
-
+    z-index: 2;
+    margin-left:100px;
+    margin-top:500px;
+    
 }
 
 #win{
@@ -78,8 +85,8 @@
     text-shadow: 1px 1px 5px black;
 }
 #finish{
-    width:90vw;
-    height:50vw;
+    width:100vw;
+    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -94,3 +101,9 @@
         transform: scale(1.5);
     }
 }
+
+#img{
+    width:90%;
+    height:auto;
+}
+

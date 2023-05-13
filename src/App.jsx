@@ -72,32 +72,34 @@ function App() {
       </div>
       <h1>미세먼지 현황</h1>
       <button onClick={loadRow}>로드</button> 
+     
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>pm10</th>
+              <th>o3</th>
+              <th>상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            {
+            row.map((gu, index)=>{
+              return(
+                <tr key={index}>
+                  <td>{gu.MSRSTE_NM}</td>
+                  <td>{gu.PM10}</td>
+                  <td>{gu.O3}</td>
+                  <td>{gu.IDEX_NM}</td>
+                </tr>
+              )
+            })
+            }
+          </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>이름</th>
-            <th>pm10</th>
-            <th>o3</th>
-            <th>상태</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          {
-          row.map((gu, index)=>{
-            return(
-              <tr key={index}>
-                <td>{gu.MSRSTE_NM}</td>
-                <td>{gu.PM10}</td>
-                <td>{gu.O3}</td>
-                <td>{gu.IDEX_NM}</td>
-              </tr>
-            )
-          })
-          }
-        </tbody>
-      </table>
+      
 
       {/* <p className="read-the-docs">
         Click on the Vite and React logos to learn more

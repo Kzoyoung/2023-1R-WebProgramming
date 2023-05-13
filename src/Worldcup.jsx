@@ -76,9 +76,10 @@ function Worldcup(){
     return (<div className='mainbox'>
         <p className='header'>라면 월드컵{round+1}/{game.length/2} <b>{game.length===2?"결승":game.length+"강"}</b></p>
         <img id="versus" src={versus}/>
-        <p id="name1">{game[round*2].name}</p>
+        
         <div id={"limg"+Lstate}>
-            <img src={game[round*2].src} onClick={()=>{
+            <p id="nameL">{game[round*2].name}</p>
+            <img id="img" src={game[round*2].src} onClick={()=>{
                 if(!isDisabled){
                     setLState(1);
                     setIsDisabled(true);
@@ -93,9 +94,10 @@ function Worldcup(){
                     
             }}/>
         </div>
-        <p id="name2">{game[round*2+1].name}</p>
+       
         <div id={"rimg"+Rstate}>
-            <img src={game[round*2+1].src} onClick={()=>{
+            <p id="nameR">{game[round*2+1].name}</p>
+            <img id="img" src={game[round*2+1].src} onClick={()=>{
                 if(!isDisabled){
                     setRState(1);
                     setIsDisabled(true);
