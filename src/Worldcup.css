@@ -1,0 +1,96 @@
+#versus{
+    width:150px;
+    position:fixed;
+}
+.header{
+    position:absolute;
+    top:-5%;
+    text-align:center;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    width:90vw;
+    height:50px;
+    font-size:5vh;
+}
+.mainbox{
+    background-color: #181818;
+    width:90vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#limg0{
+    width:50%;
+    max-width: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#limg1{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    animation-name:slide;
+    animation-duration: 1s;
+}
+#rimg0{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#rimg1{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    animation-name:slide;
+    animation-duration: 1s;
+}
+#name1{
+    font-size:7vh;
+    position:fixed;
+    top:60vh;
+    left:30%;
+    color:white;
+    text-shadow: 1px 1px 5px black;
+    z-index: 5;
+}
+
+#name2{
+    font-size:7vh;
+    position:fixed;
+    top:60vh;
+    right:30%;
+    color:white;
+    text-shadow: 1px 1px 5px black;
+    z-index: 5;
+
+}
+
+#win{
+    font-size:10vh;
+    position:fixed;
+    top:60%;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+#finish{
+    width:90vw;
+    height:50vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+@keyframes slide{
+    from{
+        transform: scale(1);
+    }   
+    to{
+        transform: scale(1.5);
+    }
+}

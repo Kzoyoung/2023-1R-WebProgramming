@@ -1,0 +1,25 @@
+원래 main.jsx 의 모습
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
+)
+
+
+자바스크립트로 바꿀시에는 위 코드에서 <>을 사용한 문법들을 그대로 사용할수 없으므로
+React.createElement를 사용하여 다음과같이 바뀝니다.
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App.jsx';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  React.createElement(React.StrictMode, null, React.createElement(App, null))
+);
