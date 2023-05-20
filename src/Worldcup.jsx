@@ -88,7 +88,7 @@ function Worldcup(){
     },[round]);
 
     if(game.length===1){
-        localStorage.setItem("월드컵",JSON.stringify(stat));
+        localStorage.setItem("2016112623",JSON.stringify(stat));
         Object.keys(stat).map((name)=>{
             sum += stat[name];
             console.log({sum});
